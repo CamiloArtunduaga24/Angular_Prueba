@@ -1,0 +1,33 @@
+
+<!-- <div >
+    <ul class="list-group">
+        <img [src]="productoPedido.producto.img">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ productoPedido.producto.nombre }}
+              <span class="badge bg-primary rounded-pill">  {{ productoPedido.cantidad }} </span>
+            </li> 
+      </ul>
+<div class="col-xs-10 col-sm-6 col-md-4">
+</div> -->
+
+<div class="col-xs-10 col-sm-6 col-md-4 card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="productoPedido.producto.img">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{{ productoPedido.producto.nombre }}   </h1>
+          <h1 class="card-text">Cantidad {{ productoPedido.cantidad }}</h1>
+          <button 
+            type="button" class="btn btn-outline-primary ">
+            +
+        </button>
+        <button 
+            type="button" class="btn btn-outline-danger ">
+            -
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>

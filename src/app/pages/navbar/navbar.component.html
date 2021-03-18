@@ -1,0 +1,36 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+            <img src="/assets/img/Tul.png" alt="" width="50" height="50">
+      </a>
+
+      <div class="collapse navbar-collapse" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="btn-mr-1">
+            <button style="position: absolute; right: 0;"
+                    class="btn btn-bg btn-primary"
+                    [routerLink]="['/perfil']" >
+              Login o Registrar
+            </button>
+            <button style="position: relative; right: 0;"
+                    class="btn btn-bg btn-primary"
+                    [routerLink]="['/carrito']" >
+              carrito
+            </button>
+          </div>
+          
+
+          <!-- Active -->
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link active" [routerLink]="['productos']">Productos</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link active" [routerLink]="['producto/nuevo']">Set Products</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link active" [routerLink]="['about']">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,13 @@
+<hr>
+<h1>CARRITO DE COMPRAS</h1>
+<button style="position: initial; right: 0;"
+                    class="btn btn-bg btn-primary"
+                    [routerLink]="['/productos']" >
+              Tienda
+</button>
+<hr>
+
+<div *ngFor="let producto of pedido.productos">
+    <app-item-carrito [productoPedido]="producto" ></app-item-carrito>
+</div>
+

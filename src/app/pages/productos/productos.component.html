@@ -1,0 +1,20 @@
+
+<hr>
+<nav class="navbar stick-top navbar-expand-lg navbar-ligth bg-ligth">
+  <h1 >PRODUCTOS</h1>
+</nav>
+<hr>
+
+
+
+
+
+    <div *ngFor="let producto of productos">
+      <app-pages  [producto]=producto > {{producto.nombre}} </app-pages>
+
+    </div>
+
+   
+
+ 
+

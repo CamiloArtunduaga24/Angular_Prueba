@@ -1,0 +1,33 @@
+
+     <div class="card-columns">
+         <div class="card" >
+         <h1 class="text-center">{{producto.nombre}}</h1>
+         <img class="card-img-top mg-top img-fluid  w-" [src]="producto.img" [alt]="producto.nombre ">
+             <div class="card-block">
+                <h2 class="card-text"> $ {{producto.precio}} </h2>
+                <p class="card-text">{{producto.descripcion}}<small class="text-muted"> </small></p>
+                <button type="button" 
+                        class="btn btn-outline-primary btn-block"
+                        (click)="addCarrito()">
+                    comprar
+                </button>
+             </div>
+
+         </div>
+     </div>
+     
+
+
+ 
+
+
+<!-- <div class="row" >
+    <div class="card-sm-6">
+    <img class="card-img-top img-fluid" [src]="producto.img" [alt]="producto.nombre">
+        <div class="card-block"  >
+        <h4 class="card-title">{{producto.nombre}}</h4>
+        <p class="card-text"> {{producto.precio}} </p>
+        <p class="card-text">{{producto.descripcion}}<small class="text-muted"> </small></p>
+</div>
+</div>
+  </div> -->

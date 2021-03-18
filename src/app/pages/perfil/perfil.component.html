@@ -1,0 +1,169 @@
+<form >
+<div class="container-login100">
+  <form class="px-4 py-3">
+
+    <div *ngIf="!uid.length">
+
+      <div class="mb-4">
+        <h1>Ingrese Sus Datos</h1>
+        <label *ngIf="!ingresarEnable"
+               for="exampleDropdownFormEmail1" 
+               class="form-label">Nombre
+        </label>
+        <input  *ngIf="!ingresarEnable"
+                [(ngModel)]="cliente.nombre"
+                name="nombre"
+                ngDefaultControl 
+                type="text"
+                class="form-control" 
+                placeholder="Nombre" 
+                required>
+      </div>
+  
+      <div class="mb-4">
+        <label for="exampleDropdownFormEmail1" 
+               class="form-label">Email address
+        </label>
+        <input [(ngModel)]="cliente.email"
+                name="email"
+                ngDefaultControl
+                type="text"
+                class="form-control" 
+                placeholder="E-mail" 
+                required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+        <input [(ngModel)]="cliente.password"
+                name="password"
+                ngDefaultControl
+                type="password"
+                class="form-control" 
+                placeholder="password" 
+                required>
+      </div>
+  
+      <button  *ngIf="!ingresarEnable" type="submit" class="btn btn-primary mr-3"(click)="ingresarEnable = true">Ingresar</button>
+      <button  *ngIf="ingresarEnable" type="submit" class="btn btn-primary mr-3"(click)="ingresar()">Login</button>
+      <button  *ngIf="!ingresarEnable"type="submit" class="btn btn-danger"(click)="registrarse()">Registrarse</button>
+      <button  *ngIf="ingresarEnable" type="submit" class="btn btn-danger"(click)="ingresarEnable = false">ó Registrarse</button>
+     
+
+    </div>
+</form>
+
+<div *ngIf="uid.length">
+
+
+  <div class="mb-4">
+    <h1>Tus Datos</h1>
+    <label for="exampleDropdownFormEmail1" 
+           class="form-label">{{cliente.nombre}}
+    </label>
+  </div>
+
+  <div class="mb-4">
+    <label for="exampleDropdownFormEmail1" 
+           class="form-label">{{cliente.email}}
+    </label>
+  </div>
+
+
+  
+  <div class="dropdown-divider"></div>
+  <button type="submit" class="btn btn-dark ml-4"(click)="salir()">Salir</button>
+</div>
+
+</div>
+
+  
+
+</form>
+
+<!-- <hr>
+<h1>Ingrese Sus Datos</h1>
+
+<form action="">
+
+
+<div class="col" >
+    <form>
+    
+        <div class="form-group row" >
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+      
+              <input [(ngModel)]="cliente.nombre"
+                     name="email"
+                     ngDefaultControl 
+                     type="text"
+                     class="form-control" 
+                     placeholder="Nombre" 
+                     required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-2 col-form-label">email</label>
+            <div class="col-8">
+      
+              <input [(ngModel)]="cliente.email"
+                     name="email"
+                     ngDefaultControl
+                     type="text"
+                     class="form-control" 
+                     placeholder="E-mail" 
+                     required>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label class="col-2 col-form-label">password</label>
+            <div class="col-8">
+      
+              <input [(ngModel)]="cliente.password"
+                     name="password"
+                     ngDefaultControl
+                     type="password"
+                     class="form-control" 
+                     placeholder="password" 
+                     required>
+            </div>
+          </div>
+
+
+        </form>
+
+
+</div>
+
+<div class="form-group text-center">
+    <div class="col">
+        <button class="btn btn-info w-25 mr-2"
+                (click)="ingresar()">
+                Ingresar
+        </button>
+        <button class="btn btn-danger w-25"
+                (click)="registrarse()">
+                Guardar
+        </button>
+    </div>
+</div>
+<hr>
+
+<div class="form-group text-center">
+  <div class="col">
+      <button class="btn btn-primary w-25"
+              (click)="salir()">
+              Salir
+      </button>
+  </div>
+</div>
+
+
+
+
+</form> -->
+

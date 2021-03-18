@@ -1,0 +1,203 @@
+<hr>
+<h1>PRODUCTO</h1>
+<hr>
+<form action="">
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-dark "
+                (click)="nuevoItem()" >
+            Nuevo
+        </button>
+    </div>
+</div>
+
+
+<div class="col" *ngIf="newEnable ">
+    <form>
+    
+        <div class="form-group row" >
+            <label class="col-2 col-form-label">Nombre Producto</label>
+            <div class="col-8">
+      
+              <input [(ngModel)]="newProducto.nombre"
+                     name="nombre"
+                     ngDefaultControl
+                     type="text"
+                     class="form-control" 
+                     placeholder="Nombre Producto" 
+                     required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-2 col-form-label">Precio</label>
+            <div class="col-8">
+      
+              <input [(ngModel)]="newProducto.precio"
+                     name="precio"
+                     ngDefaultControl
+                     type="number"
+                     class="form-control" 
+                     placeholder="Precio" 
+                     required>
+            </div>
+          </div>
+
+          <div class="form-group row ">
+            <label class="col-2 col-form-label">Descricion</label>
+            <textarea class="form-control" 
+                      rows="4"
+                      [(ngModel)]="newProducto.descripcion"
+                      name="descripcion"
+                      ngDefaultControl
+                      type="text"
+                      class="form-control" 
+                      placeholder="Descripción" 
+                      required></textarea>
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="file" 
+                   accept="image/*"
+                   (change) ="newImage($event)">
+                <img [src]="newProducto.img" >   
+        </div>
+
+        
+
+        
+    </form>
+</div>
+
+<div class="form-group text-center">
+    <div class="col">
+        <button class="btn btn-primary w-25"
+                (click)="guardar()">
+                Guardar
+        </button>
+    </div>
+</div>
+
+</form>
+
+<div class="card" style="width: 50rem;"  
+     *ngFor="let producto of productos">
+        <div class="card-body">
+            <h3 class="card-title">{{producto.nombre}}</h3>
+            <h8 class="card-title">{{producto.precio}}</h8>
+            <p class="card-text">{{producto.descripcion}}</p>
+
+            <div (click)="newProducto = producto;  newEnable=true " 
+                 class="btn btn-primary col-2">Actualizar</div>
+                 <hr>
+            <div class="btn btn-danger col-2" 
+                 (click)="deleteProductos(producto)">Borrar</div>
+
+        </div>
+</div> 
+
+<!-- <h1>Producto </h1>
+<hr>
+
+<form action="">
+ 
+      
+    <div class="row text-right">
+        <div class="col">
+          <button class="btn btn-dark"
+                 (click)="nuevoItem()" >
+            Nuevo
+          </button>
+        </div>
+    </div>
+
+
+
+    <div class="form-group row" >
+      <label class="col-2 col-form-label">Nombre Producto</label>
+      <div class="col-8">
+
+        <input [(ngModel)]="newProducto.nombre"
+               name="nombre"
+               ngDefaultControl
+               type="text"
+               class="form-control" 
+               placeholder="Nombre Producto" 
+               required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Precio</label>
+      <div class="col-8">
+
+        <input [(ngModel)]="newProducto.precio"
+               name="precio"
+               ngDefaultControl
+               type="number"
+               class="form-control" 
+               placeholder="Precio" 
+               required>
+      </div>
+    </div>
+
+  
+
+    <div class="form-group row ">
+        <label class="col-2 col-form-label">Descricion</label>
+        <textarea class="form-control" 
+                rows="4"
+                [(ngModel)]="newProducto.descripcion"
+                name="descripcion"
+                ngDefaultControl
+                type="text"
+                class="form-control" 
+                placeholder="Descripción" 
+                required></textarea>
+    </div>
+   
+
+  <div class="input-group mb-3">
+    <input type="file" 
+           accept="image/*"
+           (change) ="newImage($event)">
+        <img [src]="newProducto.img" >   
+    </div>
+
+
+
+
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+</div>
+
+
+
+
+
+<div class="row text-right">
+    <div class="col">
+      <button class="btn btn-primary 2-25"
+             (click)="guardar()" >
+        Guardar
+      </button>
+    </div>
+</div>
+
+<div class="card" style="width: 50rem;"  
+     *ngFor="let producto of productos">
+        <div class="card-body">
+            <h3 class="card-title">{{producto.nombre}}</h3>
+            <h8 class="card-title">{{producto.precio}}</h8>
+            <p class="card-text">{{producto.descripcion}}</p>
+            <a (click)="newProducto = producto;  newEnable=true " class="btn btn-primary">actualizar</a>
+            <a  class="btn btn-danger" (click)="deleteProductos(producto)">borrar</a>
+        </div>
+</div>
+</form> -->
