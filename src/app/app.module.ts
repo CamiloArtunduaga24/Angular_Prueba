@@ -42,6 +42,9 @@ import { ItemCarritoComponent } from './pages/item-carrito/item-carrito.componen
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
+  exports:[
+    ItemCarritoComponent,
+  ],
   providers: [FirestoreService],
   bootstrap: [AppComponent]
 })

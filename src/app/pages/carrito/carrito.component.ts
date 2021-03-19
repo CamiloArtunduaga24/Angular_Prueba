@@ -16,13 +16,25 @@ export class CarritoComponent implements OnInit {
                public carritoService: CarritoService ) {
 
               this.loadPedido();
+              this.initCarrito();
    }
 
   ngOnInit()  {
   }
 
   loadPedido(){
-    this.pedido = this.carritoService.getCarrito()
+    this.carritoService.getCarrito().subscribe(resp => {
+      this.pedido = resp;
+    });
   }
+
+  initCarrito(){
+    this.pedido = {
+    id: '',
+    cliente: null,
+    productos: [],
+    precioTotal: null
+  };
+}
 
 }
