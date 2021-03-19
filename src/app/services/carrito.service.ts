@@ -34,7 +34,7 @@ export class CarritoService {
   }
 
   loadCarrito(){
-    const path = 'clientes/' + this.uid + '/' + 'carrito';
+    const path = 'Clientes/' + this.uid + '/' + 'carrito';
     this.firestoreService.getDoc<Pedido>(path, this.uid).subscribe (resp => {
       console.log(resp);
         if( resp ) {
@@ -57,10 +57,10 @@ export class CarritoService {
   }
 
   loadCliente(){
-      const path = 'Cliente';
+      const path = 'Cliente'
       this.firestoreService.getDoc<Cliente>(path, this.uid).subscribe(resp => {
-        this.cliente = resp ;
-        this.loadCarrito();
+      this.cliente = resp ;
+      this.loadCarrito();
       });
     }
   
@@ -87,10 +87,10 @@ export class CarritoService {
       this.router.navigate(['/perfil']);
     }
     console.log('en add pedido' , this.pedido);
-     const path = 'Clientes/' + this.uid + '/' + this.path;
-     this.firestoreService.createDoc(this.pedido, path, this.uid).then(resp =>{
-       console.log('añadido con exito al carrito', resp); 
-     })
+   const path = 'Clientes/' + this.uid + '/' + this.path;
+    this.firestoreService.createDoc(this.pedido, path, this.uid).then(resp =>{
+      console.log('añadido con exito al carrito', resp); 
+    })
 
   }
 
