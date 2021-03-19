@@ -5,7 +5,7 @@ import { CarritoService } from '../../services/carrito.service';
 @Component({
   selector: 'app-item-carrito',
   templateUrl: './item-carrito.component.html',
-  styleUrls: ['./item-carrito.component.css']
+
 })
 export class ItemCarritoComponent implements OnInit {
 

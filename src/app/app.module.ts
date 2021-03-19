@@ -21,6 +21,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ItemCarritoComponent } from './pages/item-carrito/item-carrito.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

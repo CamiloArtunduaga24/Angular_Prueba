@@ -15,7 +15,7 @@ export class PagesComponent implements OnInit {
   }
 
   ngOnInit(){
-    //  console.log('el producto es', this.producto);
+    
   }
 
   addCarrito(){

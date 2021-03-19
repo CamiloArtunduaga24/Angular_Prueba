@@ -1,13 +1,29 @@
 <hr>
 <h1>CARRITO DE COMPRAS</h1>
-<button style="position: initial; right: 0;"
+<button style="position: initial; right: 1;"
                     class="btn btn-bg btn-primary"
                     [routerLink]="['/productos']" >
-              Tienda
+              Seguir Comprando
 </button>
 <hr>
 
 <div *ngFor="let producto of pedido.productos">
     <app-item-carrito [productoPedido]="producto" ></app-item-carrito>
 </div>
+
+<footer>
+    <button type="button" class="btn btn-dark mr-4">
+        Cantidad  <span class="badge bg-secondary"> {{ cantidad }} </span>
+      </button>
+      <button type="button" class="btn btn-dark">
+        Total <span class="badge bg-secondary"> {{ total }} </span>
+      </button>
+      <hr>
+    <button (click)="pedir()"
+            style="position: relative; right: 0;"
+           class="btn btn-bg btn-danger btn-block" >
+            PEDIDO
+    </button>
+    <hr>
+</footer>
 

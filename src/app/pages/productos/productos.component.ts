@@ -22,8 +22,9 @@ export class ProductosComponent implements OnInit {
 
   loadProduct(){
     this.firestoreService.verCollection<Producto>(this.path).subscribe(resp => {
-      // console.log(resp)
+
       this.productos = resp;
+      
     })
   }
 
