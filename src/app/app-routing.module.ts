@@ -4,6 +4,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CarritoComponent } from './pages/carrito/carrito.component'; 
+import { ExitoComponent } from './pages/exito/exito.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
  { path: 'producto/:id', component: ProductoComponent},
  { path: 'perfil', component: PerfilComponent},
  { path: 'carrito', component:  CarritoComponent},
+ { path: 'exito', component: ExitoComponent},
  { path: '**', redirectTo:'productos', pathMatch:'full'}
 ];
 

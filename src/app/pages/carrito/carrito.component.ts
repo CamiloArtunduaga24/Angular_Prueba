@@ -18,6 +18,8 @@ export class CarritoComponent implements OnInit, OnDestroy {
   total: number;
   cantidad: number;
 
+  exito = false;
+
   constructor( public firetoreService: FirestoreService,
                public carritoService: CarritoService,
                public auth: FirebaseauthService) {

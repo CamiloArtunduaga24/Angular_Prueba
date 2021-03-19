@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ItemCarritoComponent } from './pages/item-carrito/item-carrito.component';
+import { ExitoComponent } from './pages/exito/exito.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ItemCarritoComponent } from './pages/item-carrito/item-carrito.componen
     PerfilComponent,
     CarritoComponent,
     ItemCarritoComponent,
+    ExitoComponent,
   ],
   imports: [
     BrowserModule,

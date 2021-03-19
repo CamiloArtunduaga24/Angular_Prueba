@@ -8,6 +8,7 @@
                 <p class="card-text">{{producto.descripcion}}<small class="text-muted"> </small></p>
                 <button type="button" 
                         class="btn btn-outline-primary btn-block"
+                        [routerLink]="['/carrito']"  
                         (click)="addCarrito()">
                     comprar
                 </button>

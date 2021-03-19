@@ -16,14 +16,17 @@
         Cantidad  <span class="badge bg-secondary"> {{ cantidad }} </span>
       </button>
       <button type="button" class="btn btn-dark">
-        Total <span class="badge bg-secondary"> {{ total }} </span>
+        $ Total <span class="badge bg-secondary"> {{ total }} </span>
       </button>
       <hr>
-    <button (click)="pedir()"
+    <button [routerLink]="['/exito']"  
+            (click)="pedir()"
             style="position: relative; right: 0;"
            class="btn btn-bg btn-danger btn-block" >
             PEDIDO
     </button>
     <hr>
+
+    
 </footer>
 
